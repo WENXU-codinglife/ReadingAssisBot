@@ -3,14 +3,16 @@ import logging
 from discord.ext import commands
 import os
 from dotenv import load_dotenv
-from IndexRet import qna
+from funcs.IndexRet import qna
 
 # Load environment variables from .env file
 load_dotenv() 
 DISCORD_BOT_TOKEN = os.getenv("DISCORD_BOT_TOKEN")
 
+COURSES = ['CMPT300', 'CMPT431', 'CMPT371']
+
 client = discord.Client(intents=discord.Intents.default())
-handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
+# handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
 
 @client.event
 async def on_ready():
@@ -27,8 +29,10 @@ async def on_message(message):
         await message.channel.send('How can I help you?')
 
     if message.content.startswith('Question:'):
-        await message.channel.send(qna(message.content[6:-23]))
+        for course in COURSES:
+            if course in message.content:
+                await message.channel.send(qna(course, message.content[13:-23]))
 
-client.run(DISCORD_BOT_TOKEN, log_handler=handler)
 
-
+# client.run(DISCORD_BOT_TOKEN, log_handler=handler)
+client.run(DISCORD_BOT_TOKEN)

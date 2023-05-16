@@ -4,3 +4,5 @@ env
 discord.log
 .env
 .DS_Store
+TOKEN_DEV
+data
