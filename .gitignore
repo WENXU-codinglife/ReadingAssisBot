@@ -1,1 +1,6 @@
+__pycache__
+.vscode
 env
+discord.log
+.env
+.DS_Store
