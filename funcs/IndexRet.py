@@ -6,7 +6,6 @@ from utils.utils import generate_directory_structure
 # Load environment variables from .env file
 load_dotenv() 
 
-os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 STORAGE = './storage'
 
 # scan the data dir

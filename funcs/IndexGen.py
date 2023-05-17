@@ -1,16 +1,12 @@
 import os
 from dotenv import load_dotenv
-
-from llama_index import SimpleDirectoryReader, download_loader
-from llama_index.node_parser import SimpleNodeParser
+from llama_index import download_loader
 from llama_index import LLMPredictor, GPTVectorStoreIndex, PromptHelper, ServiceContext
 from langchain import OpenAI
-
 from utils.utils import generate_directory_structure
 
 load_dotenv() 
 
-os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 
 
 def indexGenerator(data_dir_path, persist_dir_path): 

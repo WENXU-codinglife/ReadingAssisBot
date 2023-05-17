@@ -32,7 +32,8 @@ async def on_message(message):
     if message.content.startswith('Question:'):
         for course in COURSES:
             if course in message.content:
-                await message.channel.send(qna(course, message.content[13:-23]))
+                print(message.content)
+                await message.channel.send(qna(course, message.content[16:-23]))
                 break
 
 
