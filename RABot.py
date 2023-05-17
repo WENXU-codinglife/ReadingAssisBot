@@ -10,7 +10,7 @@ from utils.utils import generate_directory_structure
 load_dotenv() 
 DISCORD_BOT_TOKEN = os.getenv("DISCORD_BOT_TOKEN")
 
-COURSES = [x[0] for x in generate_directory_structure('./data')]
+COURSES = [x[0] for x in generate_directory_structure('./storage')]
 
 client = discord.Client(intents=discord.Intents.default())
 # handler = logging.FileHandler(filename='discord.log', encoding='utf-8', mode='w')
