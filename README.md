@@ -2,6 +2,8 @@
 
 This repository contains the code and instructions to build an AI-powered Discord bot that serves as a personal studying assistant. The bot uses LlamaIndex, an open-source Python library, and the discord.py library to provide question-answering capabilities within a Discord server.
 
+![Answers based on provided materials](./img/image.png)
+
 A more detailed tutorial is [here](https://medium.com/@wxxq84/building-a-discord-question-answer-bot-my-personal-studying-assistant-a57666979c3d).
 
 ## Getting Started
