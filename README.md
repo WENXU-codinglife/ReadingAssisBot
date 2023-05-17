@@ -32,24 +32,24 @@ To set up the Discord bot and run it on your own server, follow these steps:
 3. Create a virtual environment:
 
     ```bash
-        python3 -m venv env
+    python3 -m venv env
     ```
 
 4. Activate the virtual environment:
 
     For Windows:
     ```bash
-        env\Scripts\activate
+    env\Scripts\activate
     ```
     For macOS/Linux:
     ```bash
-        source env/bin/activate
+    source env/bin/activate
     ```   
 
 5. Install the required dependencies:
 
     ```bash
-        pip install -r requirements.txt
+    pip install -r requirements.txt
     ```    
 
 ### Configuration
@@ -59,14 +59,12 @@ To set up the Discord bot and run it on your own server, follow these steps:
 2. Open the .env file and add your OpenAI API key:
 
     ```bash
-        OPENAI_API_KEY=your_api_key_here
-        DISCORD_BOT_TOKEN=your_discord_bot_token_here
+    OPENAI_API_KEY=your_api_key_here
+    DISCORD_BOT_TOKEN=your_discord_bot_token_here
     ```
 ### Running the Bot
 
-    ```bash
-        python RABot.py
-    ```
+    python3 RABot.py
 
 ### Usage
 
