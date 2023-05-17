@@ -18,7 +18,7 @@ index_dic = {}
 
 for course in dir_structure:
     # rebuild storage context
-    storage_context = StorageContext.from_defaults(persist_dir=f"STORAGE/{course[0]}")
+    storage_context = StorageContext.from_defaults(persist_dir=f"{STORAGE}/{course[0]}")
     # load index
     index = load_index_from_storage(storage_context)
     # add to index dictionary
